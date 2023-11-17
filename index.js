@@ -1,5 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+
+const app = express();
 const cors=require("cors");
 const corsOptions ={
    origin:'*', 
@@ -9,7 +11,7 @@ const corsOptions ={
 
 app.use(cors(corsOptions))
 
-const app = express();
+
 const port = process.env.PORT || 3000; // Choose a port number
 
 // Middleware to parse incoming JSON requests
